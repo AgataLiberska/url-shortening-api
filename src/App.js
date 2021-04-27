@@ -4,7 +4,7 @@ import ShortlyApp from './components/ShortlyApp';
 const App = () => {
     return (
         <>
-        <h1>Shortening url</h1>
+        <h1>Shortly</h1>
         <ShortlyApp />
         </>
     )

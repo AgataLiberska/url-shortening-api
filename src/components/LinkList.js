@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import LinkCard from './LinkCard';
 
-const LinkList = () => {
+const LinkList = ({links}) => {
+
+    const renderedLinks = links.map(link => {
+        return (
+            <LinkCard link={link.result}/>
+        )
+    })
     return (
         <div>
-            Links
+            {renderedLinks}
         </div>
     )
 }
