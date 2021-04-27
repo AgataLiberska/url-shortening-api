@@ -1,9 +1,19 @@
-import React from 'react'
-import useForm from '../hooks/useForm';
-import validate from '../validateForm';
+import React, { useState } from 'react';
 
-const ShortlyForm = () => {
-    const { url, handleChange, handleSubmit, error } = useForm(validate);
+const ShortlyForm = ({ onUrlSubmit }) => {
+    const [ url, setUrl ] = useState('');
+    const [ formError, setFormError ] = useState('');
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (!url || !url.trim()) {
+            setFormError('Please provide a valid URL')
+        } else {
+            setFormError('');
+            onUrlSubmit(url);
+        }
+    }
 
     return (
         <form onSubmit={handleSubmit}>
@@ -12,10 +22,10 @@ const ShortlyForm = () => {
                 <input 
                     type='text'
                     id='url'
-                    value={url}
-                    onChange={handleChange}
+                    value={ url }
+                    onChange={ e => setUrl(e.target.value) }
                 />
-                { error.message && <p>{ error.message }</p> }
+                { formError ? <p>{formError}</p> : null }
             </div>
             <button>Submit</button>
         </form>
