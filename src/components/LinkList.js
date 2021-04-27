@@ -5,7 +5,7 @@ const LinkList = ({links}) => {
 
     const renderedLinks = links.map(link => {
         return (
-            <LinkCard link={link.result}/>
+            <LinkCard link={link.result} key={link.code} />
         )
     })
     return (
