@@ -13,6 +13,8 @@ const ShortlyForm = ({ onUrlSubmit }) => {
             setFormError('');
             onUrlSubmit(url);
         }
+
+        setUrl('');
     }
 
     return (
