@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ShortlyForm from './ShortlyForm';
 import LinkList from './LinkList';
 import shrtcode from '../API/shrtcode';
 
+const useStateWithLocalStorage = localStorageKey => {
+    const [ value, setValue ] = useState(JSON.parse(localStorage.getItem(localStorageKey)) || [] );
+
+    useEffect(() => {
+        localStorage.setItem(localStorageKey, JSON.stringify(value))
+    }, [value, localStorageKey]);
+
+    return [value, setValue];
+}
+
 const ShortlyApp = () => {
     const [ appError, setAppError ] = useState('');
-    const [ results, setResults ] = useState([]);
+    const [ results, setResults ] = useStateWithLocalStorage('results');
 
     const submitUrl = async (url) => {
         try {
@@ -21,10 +31,7 @@ const ShortlyApp = () => {
         } catch (e) {
             setAppError('Something went wrong. Check if URL is correct and try again.')
         }
-
     }
-
-    // use useEffect to save/retrieve from local storage - main function to retrieve and returned function to save
 
     return (
         <>
