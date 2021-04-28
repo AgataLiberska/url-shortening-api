@@ -1,21 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const LinkCard = ({link}) => {
+const LinkCard = ({ link, copiedLinks, setCopiedLinks }) => {
     const [isCopied, setIsCopied] = useState(false);
 
     const copyLink = () => {
-        setIsCopied(true);
+        setCopiedLinks(copiedLinks => [...copiedLinks, link.code])
         navigator.clipboard.writeText(link.full_short_link);
     }
 
+    useEffect(() => {
+        if (copiedLinks.includes(link.code)) {
+            setIsCopied(true)
+        } 
+    }, [copiedLinks, link.code])
+
     return (
-        <div>
+        <li>
             <p>{link.original_link}</p>
             <p>{link.full_short_link}</p>
             <button onClick={copyLink}>
                 {isCopied ? 'Copied!' : 'Copy'}
             </button>
-        </div>
+        </li>
     )
 }
 

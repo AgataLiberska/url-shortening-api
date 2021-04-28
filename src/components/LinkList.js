@@ -1,17 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import LinkCard from './LinkCard';
 
-const LinkList = ({links}) => {
+const LinkList = ({results}) => {
+    const [copiedLinks, setCopiedLinks] = useState([]);
 
-    const renderedLinks = links.map(link => {
+    const renderedLinks = results.map(result => {
+        const link = result.result;
+
         return (
-            <LinkCard link={link.result} key={link.code} />
+            <LinkCard 
+                key={link.code}
+                link={link}
+                copiedLinks={copiedLinks} 
+                setCopiedLinks={setCopiedLinks}
+            />
         )
     })
+
     return (
-        <div>
+        <ul>
             {renderedLinks}
-        </div>
+        </ul>
     )
 }
 

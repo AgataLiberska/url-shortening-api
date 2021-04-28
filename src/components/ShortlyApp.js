@@ -15,9 +15,10 @@ const ShortlyApp = () => {
                     url: url.trim()
                 }
             })
+
             setResults(results => [data, ...results]);
 
-        } catch {
+        } catch (e) {
             setAppError('Something went wrong. Check if URL is correct and try again.')
         }
 
@@ -29,7 +30,7 @@ const ShortlyApp = () => {
         <>
             <ShortlyForm onUrlSubmit={submitUrl}/>
             { appError ? <p>{ appError }</p> : null }
-            <LinkList links={ results }/>
+            <LinkList results={ results }/>
         </>
     )
 
