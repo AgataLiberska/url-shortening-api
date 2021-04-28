@@ -18,10 +18,11 @@ const LinkCard = ({ link, copiedLinks, setCopiedLinks, removeLink }) => {
         <li>
             <p>{link.original_link}</p>
             <p>{link.full_short_link}</p>
+            <button onClick={() => removeLink(link.code)}>Delete</button>
             <button onClick={copyLink}>
                 {isCopied ? 'Copied!' : 'Copy'}
             </button>
-            <button onClick={() => removeLink(link.code)}>Delete</button>
+
         </li>
     )
 }
