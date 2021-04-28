@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const LinkCard = ({ link, copiedLinks, setCopiedLinks }) => {
+const LinkCard = ({ link, copiedLinks, setCopiedLinks, removeLink }) => {
     const [isCopied, setIsCopied] = useState(false);
 
     const copyLink = () => {
@@ -21,6 +21,7 @@ const LinkCard = ({ link, copiedLinks, setCopiedLinks }) => {
             <button onClick={copyLink}>
                 {isCopied ? 'Copied!' : 'Copy'}
             </button>
+            <button onClick={() => removeLink(link.code)}>Delete</button>
         </li>
     )
 }

@@ -30,7 +30,7 @@ const ShortlyApp = () => {
         <>
             <ShortlyForm onUrlSubmit={submitUrl}/>
             { appError ? <p>{ appError }</p> : null }
-            <LinkList results={ results }/>
+            <LinkList results={ results } setResults={ setResults }/>
         </>
     )
 
