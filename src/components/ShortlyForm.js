@@ -20,7 +20,7 @@ const ShortlyForm = ({ onUrlSubmit }) => {
     return (
         <form onSubmit={handleSubmit}>
             <div>
-                <label htmlFor='url'></label>
+                <label htmlFor='url'>Shorten a link here </label>
                 <input 
                     type='text'
                     id='url'
