@@ -15,9 +15,11 @@ const useStateWithLocalStorage = localStorageKey => {
 
 const ShortlyApp = () => {
     const [ appError, setAppError ] = useState('');
+    const [ isLoading, setIsLoading ] = useState(false);
     const [ results, setResults ] = useStateWithLocalStorage('results');
 
     const submitUrl = async (url) => {
+        setIsLoading(true);
         try {
             setAppError('');
             const {data} = await shrtcode.get('/shorten', { 
@@ -25,10 +27,11 @@ const ShortlyApp = () => {
                     url: url.trim()
                 }
             })
-
+            setIsLoading(false);
             setResults(results => [data, ...results]);
 
         } catch (e) {
+            setIsLoading(false);
             setAppError('Something went wrong. Check if URL is correct and try again.')
         }
     }
@@ -37,6 +40,7 @@ const ShortlyApp = () => {
         <>
             <ShortlyForm onUrlSubmit={submitUrl}/>
             { appError ? <p>{ appError }</p> : null }
+            { isLoading? <p>Loading...</p> : null }
             <LinkList results={ results } setResults={ setResults }/>
         </>
     )
