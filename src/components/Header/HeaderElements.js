@@ -35,7 +35,7 @@ export const MenuToggle = styled.button`
 
 export const OpenMenuIcon = styled(AiOutlineMenu)`
     position: absolute;
-    display: ${({isOpen}) => isOpen ? 'none' : 'inline'};
+    display: ${({isOpen}) => (isOpen ? 'none' : 'inline')};
     height: 2rem;
     width: 2rem;
     color: var(--copy);
@@ -44,7 +44,7 @@ export const OpenMenuIcon = styled(AiOutlineMenu)`
 
 export const CloseMenuIcon = styled(AiOutlineClose)`
     position: absolute;
-    display: ${({isOpen}) => isOpen ? 'inline' : 'none'};
+    display: ${({isOpen}) => (isOpen ? 'inline' : 'none')};
     height: 2rem;
     width: 2rem;
     color: var(--copy);

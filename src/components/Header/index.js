@@ -9,14 +9,14 @@ import {
     CloseMenuIcon,
 } from './HeaderElements';
 
-const Header = ({isOpen, toggle}) => {
+const Header = ({navOpen, toggle}) => {
     return (
         <HeaderContainer  >
             <HeaderWrap>
                 <HeaderLogo src={imgLogo} alt='Shortly logo' />
-                <MenuToggle aria-label='Toggle mobile menu' onClick={toggle}>
-                    <OpenMenuIcon isOpen={isOpen}/>
-                    <CloseMenuIcon isOpen={isOpen} />
+                <MenuToggle aria-label='Toggle mobile menu' aria-expanded={navOpen} onClick={toggle}>
+                    <OpenMenuIcon isOpen={navOpen}/>
+                    <CloseMenuIcon isOpen={navOpen} />
                 </MenuToggle>
             </HeaderWrap>
         </HeaderContainer>

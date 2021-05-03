@@ -1,17 +1,20 @@
 import React, {useState} from 'react';
 import Header from '../components/Header';
+import MobileNav from '../components/MobileNav';
+
 import ShortlyApp from '../components/ShortlyApp/ShortlyApp';
 
 const Home = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [navOpen, setNavOpen] = useState(false)
 
     const toggle = () => {
-        setIsOpen(!isOpen);
+        setNavOpen(!navOpen);
     }
 
     return (
         <>
-            <Header isOpen={isOpen} toggle={toggle}/>
+            <Header navOpen={navOpen} toggle={toggle}/>
+            <MobileNav navOpen={navOpen} toggle={toggle} />
             <ShortlyApp />
         </>
     )
