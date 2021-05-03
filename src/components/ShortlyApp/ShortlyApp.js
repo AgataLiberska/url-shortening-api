@@ -1,7 +1,7 @@
 import React from 'react';
 import ShortlyForm from './ShortlyForm';
 import LinkList from './LinkList';
-import useUrls from '../hooks/useUrls';
+import useUrls from '../../hooks/useUrls';
 
 
 const ShortlyApp = () => {
