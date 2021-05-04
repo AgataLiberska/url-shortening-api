@@ -77,6 +77,7 @@ export const UserLinks = styled.div`
 `;
 
 export const MainNavLinkWithin = styled(LinkS)`
+    position: relative;
     margin: 0 1rem;
     font-size: 1rem;
     color: var(--navLink-darkText);
@@ -84,12 +85,35 @@ export const MainNavLinkWithin = styled(LinkS)`
     cursor: pointer;
     transition: color 300ms ease-in-out;
 
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0px;
+        width: 0%;
+        background-color: var(--navLink-hover);
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    }
+
     &:hover {
         color: var(--navLink-hover);
     }
+
+    &:focus {
+        outline: 0;
+        color: var(--navLink-hover);
+
+        &::after {
+            height: 2px;
+            width: 100%;
+        }
+    }
+    
 `;
 
 export const MainNavLink = styled(LinkR)`
+    position: relative;
     margin: 0 1rem;
     font-size: 1rem;
     color: var(--navLink-darkText);
@@ -100,8 +124,29 @@ export const MainNavLink = styled(LinkR)`
         margin-right: 0;
     }
 
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0px;
+        width: 0%;
+        background-color: var(--navLink-hover);
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    }
+
     &:hover {
         color: var(--navLink-hover);
+    }
+    
+    &:focus {
+        outline: 0;
+        color: var(--navLink-hover);
+
+        &::after {
+            height: 2px;
+            width: 100%;
+        }
     }
 `;
 
@@ -112,8 +157,21 @@ export const ButtonLink = styled(MainNavLink)`
     color: var(--navLink-lightText);
     transition: background-color 300ms ease-in-out;
 
-    &:hover {
+    &::after {
+        content: '';
+        position: absolute;
+        height:0;
+        width: 0;
+    }
+
+    &:hover, &:focus {
         color: var(--navLink-lightText);
         background-color: var(--button-hover);
+
+        &::after {
+            height:0;
+            width: 0;
+        }
     }
+
 `;
