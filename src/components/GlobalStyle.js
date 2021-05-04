@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
         --background-dark: #3A3054;
         --background-light: #EFF1F7;
 
-        --navLink-darkText: #9E09AA8;
+        --navLink-darkText: #9E9AA8;
         --navLink-lightText: #fff;
         --navLink-hover: #34313D;
 
@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
         line-height: 3rem;
         color: var(--heading-dark);
 
-        @media screen and (min-width: 1040px) {
+        @media screen and (min-width: 1024px) {
             font-size: 5rem;
             line-height: 5.625rem;
         }
@@ -58,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 700;
         line-height: 3rem;
 
-        @media screen and (min-width: 1040px) {
+        @media screen and (min-width: 1024px) {
             font-size: 2.5rem;
         }
     }

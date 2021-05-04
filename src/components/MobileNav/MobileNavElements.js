@@ -61,6 +61,10 @@ export const NavContainer = styled.nav`
     border-radius: 10px;
     text-align: center;
     animation: ${({isopen}) => (isopen ? css`${showNav}` : css`${hideNav}`)}
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
 `;
 
 export const MainLinksWrap = styled.div`
