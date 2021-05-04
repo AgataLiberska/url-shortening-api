@@ -6,8 +6,10 @@ export const HeroContainer = styled.section`
     margin: 0 auto 5.5rem;
 
     @media screen and (min-width: 1024px) {
+        width: 100vw;
         margin: 3rem auto 3.5rem;
         padding: 0 1.5rem;
+        overflow-x: hidden;
     }
 `   
 
@@ -34,9 +36,11 @@ export const HeroImage = styled.div`
     @media screen and (min-width: 1024px) {
         position: absolute;
         left: 55%;
-        width: 45.875rem;
+        width: 51vw;
+        height: 30.125rem;
         margin: 0;
-        background-size: cover;
+        background-size: contain;
+        background-position: center left;
     }
 `
 
