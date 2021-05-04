@@ -4,7 +4,7 @@ import { Link as LinkS } from 'react-scroll';
 
 export const NavContainer = styled.nav`
     position: absolute;
-    top: ${({isOpen}) => isOpen ? '6.25rem' : '-100%'};
+    top: ${({navOpen}) => navOpen ? '6.25rem' : '-100%'};
     left: 50%;
     transform: translateX(-50%);
     width: 90vw;

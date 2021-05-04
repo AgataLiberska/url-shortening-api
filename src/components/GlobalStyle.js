@@ -2,19 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
-    *, *::before, *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: inherit;
-    }
-
-    body {
-        min-height: 100vh;
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.125rem;
-        font-weight: 500;
-
+    :root {
         --heading-dark: #34313D;
         --heading-light: #fff;
         --copy: #9E9AA8;
@@ -41,13 +29,35 @@ const GlobalStyle = createGlobalStyle`
         --shortlyLink: #28D0D0;
     }
 
+    *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: inherit;
+    }
+
+    body {
+        min-height: 100vh;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 1.75rem;
+        color: var(--copy);
+        overflow-x: hidden;
+    }
+
     h1 {
         font-size: 2.625rem;
         font-weight: 700;
         line-height: 3rem;
         color: var(--heading-dark);
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 768px) {
+            font-size: 4rem;
+            line-height: 5rem;
+        }
+
+        @media screen and (min-width: 1280px) {
             font-size: 5rem;
             line-height: 5.625rem;
         }

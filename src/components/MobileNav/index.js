@@ -12,8 +12,8 @@ import {
 const MobileNav = ({navOpen, toggle}) => {
     return (
         <>
-            <NavContainer isOpen={navOpen}>
-                <MobileLinkWithin to='/' onClick={toggle} tabindex='0'>Try It Out</MobileLinkWithin>
+            <NavContainer navOpen={navOpen}>
+                <MobileLinkWithin to='/' onClick={toggle} tabIndex='0'>Try It Out</MobileLinkWithin>
                 <MainLinksWrap>
                     <LinkWrap>
                         <MobileLink to='/' onClick={toggle}>Features</MobileLink>

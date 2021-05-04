@@ -21,12 +21,12 @@ const Header = ({navOpen, toggle}) => {
             <HeaderWrap>
                 <HeaderLogo src={imgLogo} alt='Shortly logo' />
                 <MenuToggle aria-label='Toggle mobile menu' aria-haspopup='true' aria-controls='mobileNav' aria-expanded={navOpen} onClick={toggle}>
-                    <OpenMenuIcon isOpen={navOpen}/>
-                    <CloseMenuIcon isOpen={navOpen} />
+                    <OpenMenuIcon navopen={navOpen ? 1 : 0}/>
+                    <CloseMenuIcon navopen={navOpen ? 1 : 0} />
                 </MenuToggle>
                 <MobileNav id='mobileNav' navOpen={navOpen} toggle={toggle} />
                 <MainNavWrap>
-                    <MainNavLinkWithin to='/' tabindex='0'>Try It Out</MainNavLinkWithin>
+                    <MainNavLinkWithin to='/' tabIndex='0'>Try It Out</MainNavLinkWithin>
                     <MainNavLink to='/'>Features</MainNavLink>
                     <MainNavLink to='/'>Pricing</MainNavLink>
                     <MainNavLink to='/'>Resources</MainNavLink>

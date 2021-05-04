@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import Header from '../components/Header';
+import HomeMain from '../components/HomeMain';
 
-import ShortlyApp from '../components/ShortlyApp/ShortlyApp';
+
 
 const Home = () => {
     const [navOpen, setNavOpen] = useState(false)
@@ -13,7 +14,7 @@ const Home = () => {
     return (
         <>
             <Header navOpen={navOpen} toggle={toggle}/>
-            <ShortlyApp />
+            <HomeMain />
         </>
     )
 }
