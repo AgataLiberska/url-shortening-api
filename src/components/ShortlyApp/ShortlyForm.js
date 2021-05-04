@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { ShortlyFormContainer, ShortlyFormWrap, TryShortlyForm, TryShortlyFormControl } from './ShortlyAppElements';
 import {
-    HiddenLabel, FormInput, FormError, SubmitButton
+    HiddenLabel, FormInput, SubmitButton
 } from '../Forms';
+import { ErrorMessage } from '../ErrorMessage';
 
 const ShortlyForm = ({ onUrlSubmit }) => {
     const [ url, setUrl ] = useState('');
@@ -38,7 +39,7 @@ const ShortlyForm = ({ onUrlSubmit }) => {
                     onChange={ e => setUrl(e.target.value)} 
                     isValid={isValid}
                     />
-                    { formError ? <FormError>{formError}</FormError> : null }
+                    { formError ? <ErrorMessage margin='0.25rem 0 0' fontSize='0.75rem'>{formError}</ErrorMessage> : null }
                 </TryShortlyFormControl>
                 <SubmitButton>Shorten It!</SubmitButton>
             </TryShortlyForm>

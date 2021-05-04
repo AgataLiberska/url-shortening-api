@@ -65,11 +65,3 @@ export const SubmitButton = styled.button`
         width: 11.75rem;
     }
 `;
-
-export const FormError = styled.p`
-    margin-top: 0.25rem;
-    font-size: 0.75rem;
-    font-style: italic;
-    line-height: 1.125rem;
-    color: var(--errorRed);
-`;
