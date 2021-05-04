@@ -6,6 +6,9 @@ const GlobalStyle = createGlobalStyle`
         --heading-dark: #34313D;
         --heading-light: #fff;
         --copy: #9E9AA8;
+        
+        --formPlaceholder: #B6B4BC;
+        --formPlaceholder-error: rgba(244, 99, 99, 0.5);
 
         --errorRed: #f46262;
 
@@ -43,6 +46,15 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 500;
         line-height: 1.75rem;
         color: var(--copy);
+        overflow-x: hidden;
+    }
+
+    #root {
+        overflow-x: hidden;
+    }
+
+    main {
+        width: 100%;
         overflow-x: hidden;
     }
 

@@ -26,7 +26,7 @@ const Header = ({navOpen, toggle}) => {
                 </MenuToggle>
                 <MobileNav id='mobileNav' navOpen={navOpen} toggle={toggle} />
                 <MainNavWrap>
-                    <MainNavLinkWithin to='/' tabIndex='0'>Try It Out</MainNavLinkWithin>
+                    <MainNavLinkWithin to='try-app' tabIndex='0'>Try It Out</MainNavLinkWithin>
                     <MainNavLink to='/'>Features</MainNavLink>
                     <MainNavLink to='/'>Pricing</MainNavLink>
                     <MainNavLink to='/'>Resources</MainNavLink>

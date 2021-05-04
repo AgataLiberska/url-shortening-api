@@ -4,7 +4,7 @@ import { Link as LinkS } from 'react-scroll';
 
 export const NavContainer = styled.nav`
     position: absolute;
-    top: ${({navOpen}) => navOpen ? '6.25rem' : '-100%'};
+    top: ${({navOpen}) => navOpen ? '6rem' : '-100%'};
     left: 50%;
     transform: translateX(-50%);
     width: 90vw;
@@ -36,6 +36,7 @@ export const MobileLinkWithin = styled(LinkS)`
     position: relative;
     display: inline-block;
     margin-bottom: 2rem;
+    font-weight: 700;
     line-height: 1.75rem;
     color: #fff;
     text-decoration: none;
@@ -65,6 +66,7 @@ export const MobileLink = styled(LinkR)`
     position: relative;
     display: inline-block;
     margin-bottom: 2rem;
+    font-weight: 700;
     line-height: 1.75rem;
     color: var(--navLink-lightText);
     text-decoration: none;

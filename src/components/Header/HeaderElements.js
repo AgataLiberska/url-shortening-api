@@ -80,6 +80,7 @@ export const MainNavLinkWithin = styled(LinkS)`
     position: relative;
     margin: 0 1rem;
     font-size: 1rem;
+    font-weight: 700;
     color: var(--navLink-darkText);
     text-decoration: none;
     cursor: pointer;
@@ -116,6 +117,7 @@ export const MainNavLink = styled(LinkR)`
     position: relative;
     margin: 0 1rem;
     font-size: 1rem;
+    font-weight: 700;
     color: var(--navLink-darkText);
     text-decoration: none;
     transition: color 300ms ease-in-out;
