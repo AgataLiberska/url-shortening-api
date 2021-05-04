@@ -64,7 +64,9 @@ const GlobalStyle = createGlobalStyle`
     }
 
 
-
+    ul {
+        list-style-type: none;
+    }
 `;
 
 export default GlobalStyle;

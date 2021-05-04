@@ -20,30 +20,74 @@ export const NavContainer = styled.nav`
     }
 `;
 
-export const MainLinksWrap = styled.div`
+export const MainLinksWrap = styled.ul`
     margin-bottom: 2rem;
     padding-top: 2rem;
     border-top: 1px solid rgb(160 154 168 / 0.25);
     border-bottom: 1px solid rgb(160 154 168 / 0.25);
 `;
 
+export const LinkWrap = styled.li`
+
+`
+
 
 export const MobileLinkWithin = styled(LinkS)`
-    display: block;
+    position: relative;
+    display: inline-block;
     margin-bottom: 2rem;
-    font-size: 1.125rem;
     line-height: 1.75rem;
     color: #fff;
     text-decoration: none;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.25rem;
+        left: 0;
+        height: 0px;
+        width: 0%;
+        background-color: var(--navLink-lightText);
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    }           
+
+    &:focus {
+        outline: 0;
+
+        &::after {
+            height: 2px;
+            width: 100%;
+        }
+    }
 `;
 
 export const MobileLink = styled(LinkR)`
-    display: block;
+    position: relative;
+    display: inline-block;
     margin-bottom: 2rem;
-    font-size: 1.125rem;
     line-height: 1.75rem;
-    color: #fff;
-    text-decoration: none
+    color: var(--navLink-lightText);
+    text-decoration: none;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.25rem;
+        left: 0;
+        height: 0px;
+        width: 0%;
+        background-color: var(--navLink-lightText);
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    }
+
+    &:focus {
+        outline: 0;
+
+        &::after {
+            height: 2px;
+            width: 100%;
+        }
+    }
 `;
 
 export const ButtonLink = styled(MobileLink)`
@@ -52,4 +96,15 @@ export const ButtonLink = styled(MobileLink)`
     padding: 0.75rem 0 0.625rem;
     background-color: var(--button-primary);
     border-radius: 1.75rem;
+    transition: background-color 300ms ease-in-out;
+
+    &:focus {
+        outline: 0;
+        background-color: var(--button-hover);
+
+        &::after {
+            height: 0;
+            width: 0;
+        }
+    }
 `;
