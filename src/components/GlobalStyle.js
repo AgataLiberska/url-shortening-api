@@ -21,20 +21,24 @@ const GlobalStyle = createGlobalStyle`
 
         --errorRed: #f46262;
 
-        --button-primary: #28BD0D0;
+        --button-primary: #2BD0D0;
         --button-hover: #9AE3E3;
         --button-active: #3A3054;
+        --buttonText: #fff;
 
         --background-dark: #3A3054;
         --background-light: #EFF1F7;
 
         --navLink-darkText: #9E09AA8;
         --navLink-lightText: #fff;
+        --navLink-hover: #34313D;
 
         --footer-bg: #232127;
+        --footerLink: #fff;
+        --footerLink-hover: #2BD0D0;
 
-        --long-link: #34313D;
-        --shortly-link: #28D0D0;
+        --longLink: #34313D;
+        --shortlyLink: #28D0D0;
     }
 
     h1 {

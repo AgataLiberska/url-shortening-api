@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './pages/Home';
 
 import GlobalStyle from './components/GlobalStyle';
@@ -6,8 +7,12 @@ import GlobalStyle from './components/GlobalStyle';
 const App = () => {
     return (
         <>
-        <GlobalStyle />
-        <Home />
+            <Router>
+                <GlobalStyle />
+                <Switch>
+                    <Route path='/' component={Home}/> 
+                </Switch>
+            </Router>
         </>
     )
 }
