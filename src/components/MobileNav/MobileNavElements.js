@@ -1,57 +1,10 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
-const slideIn = keyframes`
-    from {
-        display: none;
-        opacity: 0;
-        top: -100%;
-    }
-
-    1% {
-        display: block;
-        opacity: 0;
-        top: -100%;
-    }
-
-    to {
-        display: block;
-        opacity: 1;
-        top: 6.25rem;
-    }
-`;
-
-const slideOut = keyframes`
-    from {
-        display: block;
-        opacity: 1;
-        top: 6.25rem;
-    }
-
-    99% {
-        display: block;
-        opacity: 0;
-        top: -100%;
-    }
-
-    to {
-        display: none;
-        opacity: 0;
-        top: -100%;
-    }
-`;
-
-const showNav = () => css`
-    ${slideIn} 400ms ease-in-out forwards;
-`
-
-const hideNav = () => css`
-    ${slideOut} 400ms  ease-in-out forwards;
-`
-
 export const NavContainer = styled.nav`
     position: absolute;
+    top: ${({isOpen}) => isOpen ? '6.25rem' : '-100%'};
     left: 50%;
     transform: translateX(-50%);
     width: 90vw;
@@ -60,7 +13,7 @@ export const NavContainer = styled.nav`
     background: var(--background-dark);
     border-radius: 10px;
     text-align: center;
-    animation: ${({isopen}) => (isopen ? css`${showNav}` : css`${hideNav}`)}
+    transition: all 300ms ease-in-out;
 
     @media screen and (min-width: 1024px) {
         display: none;

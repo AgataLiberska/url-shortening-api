@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import Header from '../components/Header';
-import MobileNav from '../components/MobileNav';
 
 import ShortlyApp from '../components/ShortlyApp/ShortlyApp';
 
@@ -14,7 +13,6 @@ const Home = () => {
     return (
         <>
             <Header navOpen={navOpen} toggle={toggle}/>
-            <MobileNav navOpen={navOpen} toggle={toggle} />
             <ShortlyApp />
         </>
     )
