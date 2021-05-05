@@ -1,7 +1,9 @@
 import React from 'react';
+import useUrls from '../../hooks/useUrls';
+
 import ShortlyForm from './ShortlyForm';
 import LinkList from './LinkList';
-import useUrls from '../../hooks/useUrls';
+import Loader from '../Loader';
 import { ErrorMessage } from '../ErrorMessage';
 import {
     ShortlyAppContainer, ShortlyWrap
@@ -16,7 +18,7 @@ const ShortlyApp = () => {
             <ShortlyWrap>
                 <ShortlyForm onUrlSubmit={submitUrl}/>
                 { appError ? <ErrorMessage margin='1rem auto' fontSize='1rem'>{ appError }</ErrorMessage> : null }
-                { isLoading? <p>Loading...</p> : null }
+                { isLoading? <Loader /> : null }
                 <LinkList results={ results } setResults={ setResults }/>
             </ShortlyWrap>
         </ShortlyAppContainer>

@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
 
         --background-dark: #3A3054;
         --background-light: #EFF1F7;
+        --background-card: #fff;
 
         --navLink-darkText: #9E9AA8;
         --navLink-lightText: #fff;

@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import LinkCard from './LinkCard';
 
+import { LinkListContainer } from './ShortlyAppElements';
+
 const LinkList = ({results, setResults }) => {
     const [copiedLinks, setCopiedLinks] = useState([]);
 
@@ -23,9 +25,9 @@ const LinkList = ({results, setResults }) => {
     })
 
     return (
-        <ul>
+        <LinkListContainer>
             {renderedLinks}
-        </ul>
+        </LinkListContainer>
     )
 }
 
