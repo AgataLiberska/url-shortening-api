@@ -54,14 +54,6 @@ const GlobalStyle = createGlobalStyle`
         overflow-x: hidden;
     }
 
-    #root {
-        overflow-x: hidden;
-    }
-
-    main {
-        overflow-x: hidden;
-    }
-
     h1 {
         font-size: 2.625rem;
         font-weight: 700;

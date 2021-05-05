@@ -14,6 +14,7 @@ export const HeroContainer = styled.section`
 `   
 
 export const HeroWrap = styled.div`
+    position: relative;
     max-width: 1100px;
     margin: auto;
 
