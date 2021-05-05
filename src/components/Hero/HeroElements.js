@@ -88,7 +88,7 @@ export const HeroCopy = styled.p`
 export const HeroCTA = styled(Link)`
     display: inline-block;
     padding: 0.875rem 2.5rem 0.75rem;
-    background-color: var(--button-primary);
+    background-color: var(--btn-primary);
     font-weight: 700;
     color: var(--navLink-lightText);
     text-decoration: none;
@@ -97,6 +97,6 @@ export const HeroCTA = styled(Link)`
 
     &:hover, &:focus {
         outline: none;
-        background-color: var(--button-hover);
+        background-color: var(--btn-hover);
     }
 `

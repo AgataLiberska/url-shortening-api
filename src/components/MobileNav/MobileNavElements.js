@@ -96,13 +96,13 @@ export const ButtonLink = styled(MobileLink)`
     width: 100%;
     margin: 0;
     padding: 0.75rem 0 0.625rem;
-    background-color: var(--button-primary);
+    background-color: var(--btn-primary);
     border-radius: 1.75rem;
     transition: background-color 300ms ease-in-out;
 
     &:focus {
         outline: 0;
-        background-color: var(--button-hover);
+        background-color: var(--btn-hover);
 
         &::after {
             height: 0;

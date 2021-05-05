@@ -154,7 +154,7 @@ export const MainNavLink = styled(LinkR)`
 
 export const ButtonLink = styled(MainNavLink)`
     padding: 0.5rem 1.5rem;
-    background-color: var(--button-primary);
+    background-color: var(--btn-primary);
     border-radius: 1.75rem;
     color: var(--navLink-lightText);
     transition: background-color 300ms ease-in-out;
@@ -168,7 +168,7 @@ export const ButtonLink = styled(MainNavLink)`
 
     &:hover, &:focus {
         color: var(--navLink-lightText);
-        background-color: var(--button-hover);
+        background-color: var(--btn-hover);
 
         &::after {
             height:0;

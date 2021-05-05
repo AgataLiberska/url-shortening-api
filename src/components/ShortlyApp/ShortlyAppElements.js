@@ -5,8 +5,21 @@ import { Form, FormControl } from '../Forms';
 
 
 export const ShortlyAppContainer = styled.section`
-    padding: 0 1.5rem;
+    position: relative;
+    padding: 0 1.5rem 5rem;
     text-align: center;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 80px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--background-light);
+        z-index: -1;
+    }
 `;
 
 export const ShortlyWrap = styled.div`
@@ -48,10 +61,46 @@ export const TryShortlyFormControl = styled(FormControl)`
 `;
 
 export const LinkListContainer = styled.ul`
-    margin-bottom: 6.5rem;
+    
 `
 
 export const LinkListItem = styled.li`
     margin-bottom: 1rem;
     background-color: var(--background-card);
+    border-radius: 5px;
+    text-align: left;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+`
+
+export const LongLinkWrap = styled.div`
+    padding: 0.375rem 1rem;
+    border-bottom: 1px solid rgb(160 154 168 / 0.25);
+`
+
+export const LongLink = styled.p`
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    line-height: 2.25rem;
+    color: var(--longLink);
+`
+
+export const ShortLinkWrap = styled.div`
+    padding: 0.375rem 1rem 1rem;
+`
+
+export const ShortLink = styled.p`
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 2.25rem;
+    color: var(--shortlyLink);
+`
+export const ButtonWrap = styled.div`
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
 `

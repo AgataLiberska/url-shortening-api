@@ -12,9 +12,13 @@ const GlobalStyle = createGlobalStyle`
 
         --errorRed: #f46262;
 
-        --button-primary: #2BD0D0;
-        --button-hover: #9AE3E3;
-        --button-active: #3A3054;
+        --btn-primary: #2BD0D0;
+        --btn-hover: #9AE3E3;
+        --btn-copied: #3A3054;
+        --btn-copied-hover: #5E4A90;
+        --btn-warning: #B6B4BC;
+        --btn-warning-hover: #F46262;
+
         --buttonText: #fff;
 
         --background-dark: #3A3054;

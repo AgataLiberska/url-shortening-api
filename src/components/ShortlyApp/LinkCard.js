@@ -1,6 +1,9 @@
 import React from 'react';
 import useCopyToClipboard from '../../hooks/useCopyToClipboard';
 
+import { ButtonCopy, WarningButton } from '../Buttons';
+import { LinkListItem, LongLink, ShortLink, LongLinkWrap, ShortLinkWrap, ButtonWrap } from './ShortlyAppElements';
+
 const LinkCard = ({ link, copiedLinks, setCopiedLinks, removeLink }) => {
 
     const linkId = link.code;
@@ -9,15 +12,20 @@ const LinkCard = ({ link, copiedLinks, setCopiedLinks, removeLink }) => {
     const { isCopied, copyItem } = useCopyToClipboard(linkId, linkText, copiedLinks, setCopiedLinks);
 
     return (
-        <li>
-            <p>{link.original_link}</p>
-            <p>{link.full_short_link}</p>
-            <button onClick={() => removeLink(link.code)}>Delete</button>
-            <button onClick={copyItem}>
-                {isCopied ? 'Copied!' : 'Copy'}
-            </button>
-
-        </li>
+        <LinkListItem>
+            <LongLinkWrap >
+                <LongLink>{link.original_link}</LongLink>
+            </LongLinkWrap>
+            <ShortLinkWrap>
+                <ShortLink>{link.full_short_link}</ShortLink>
+                <ButtonWrap >
+                    <WarningButton largeText='false' onClick={() => removeLink(link.code)}>Delete</WarningButton>
+                    <ButtonCopy largeText='false' onClick={copyItem} isCopied={isCopied ? 1 : 0}>
+                    {isCopied ? 'Copied!' : 'Copy'}
+                    </ButtonCopy>
+                </ButtonWrap>
+            </ShortLinkWrap>
+        </LinkListItem>
     )
 }
 

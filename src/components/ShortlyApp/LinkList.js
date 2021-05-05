@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import LinkCard from './LinkCard';
 
 import { LinkListContainer } from './ShortlyAppElements';
@@ -22,13 +22,13 @@ const LinkList = ({results, setResults }) => {
                 removeLink={ removeLink }
             />
         )
-    })
+    });
 
     return (
         <LinkListContainer>
             {renderedLinks}
         </LinkListContainer>
-    )
+    );
 }
 
-export default LinkList
+export default LinkList;

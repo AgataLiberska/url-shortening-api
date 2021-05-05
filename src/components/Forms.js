@@ -45,7 +45,7 @@ export const FormInput = styled.input`
 export const SubmitButton = styled.button`
     width: 100%;
     padding: 0.625rem 2.5rem;
-    background: var(--button-primary);
+    background: var(--btn-primary);
     border: 0;
     border-radius: 0.375rem;
     font-size: 1.125rem;
@@ -57,7 +57,7 @@ export const SubmitButton = styled.button`
     &:hover, &:focus {
         outline: 0;
         cursor: pointer;
-        background-color: var(--button-hover);
+        background-color: var(--btn-hover);
     }
 
     @media screen and (min-width: 768px) {
