@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import mobileBg from '../../images/bg-shorten-mobile.svg';
-import desktopBg from '../../images/bg-boost-desktop.svg';
+import desktopBg from '../../images/bg-shorten-desktop.svg';
 import { Form, FormControl } from '../Forms';
 
 
@@ -19,6 +19,14 @@ export const ShortlyAppContainer = styled.section`
         right: 0;
         background-color: var(--background-light);
         z-index: -1;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding: 0 1.5rem 7.5rem;
+
+        &::before {
+            top: 56px;
+        }
     }
 `;
 
@@ -73,11 +81,25 @@ export const LinkListItem = styled.li`
     &:last-of-type {
         margin-bottom: 0;
     }
+
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.125rem 2rem; 
+        gap: 1rem;
+    }
 `
 
 export const LongLinkWrap = styled.div`
     padding: 0.375rem 1rem;
     border-bottom: 1px solid rgb(160 154 168 / 0.25);
+
+    @media screen and (min-width: 1024px) {
+        border: 0;
+        width: 48%;
+        padding: unset;
+    }
 `
 
 export const LongLink = styled.p`
@@ -87,10 +109,23 @@ export const LongLink = styled.p`
     font-size: 1rem;
     line-height: 2.25rem;
     color: var(--longLink);
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.25rem;
+        line-height: 2.25rem;
+    }
 `
 
 export const ShortLinkWrap = styled.div`
     padding: 0.375rem 1rem 1rem;
+
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1.25rem;
+        padding: unset;
+    }
 `
 
 export const ShortLink = styled.p`
@@ -98,9 +133,18 @@ export const ShortLink = styled.p`
     font-size: 1rem;
     line-height: 2.25rem;
     color: var(--shortlyLink);
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.25rem;
+        line-height: 2.25rem;
+    }
 `
 export const ButtonWrap = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 0.5rem;
+
+    @media screen and (min-width: 1024px) {
+        width: 11rem;
+    }
 `

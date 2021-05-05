@@ -37,6 +37,7 @@ export const HeroImage = styled.div`
         position: absolute;
         left: 55%;
         width: 51vw;
+        max-width: 46rem;
         height: 30.125rem;
         margin: 0;
         background-size: contain;
