@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import Header from '../components/Header';
-import HomeMain from '../components/HomeMain';
+import Hero from '../components/Hero';
+import ShortlyApp from '../components/ShortlyApp/ShortlyApp';
+import InfoSection from '../components/InfoSection';
 
 
 
@@ -14,7 +16,11 @@ const Home = () => {
     return (
         <>
             <Header navOpen={navOpen} toggle={toggle}/>
-            <HomeMain />
+            <main>
+                <Hero />       
+                <ShortlyApp />
+                <InfoSection />
+            </main>
         </>
     )
 }

@@ -59,7 +59,6 @@ const GlobalStyle = createGlobalStyle`
     }
 
     main {
-        width: 100%;
         overflow-x: hidden;
     }
 
