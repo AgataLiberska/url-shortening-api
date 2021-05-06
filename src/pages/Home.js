@@ -3,6 +3,8 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import ShortlyApp from '../components/ShortlyApp/ShortlyApp';
 import InfoSection from '../components/InfoSection';
+import CtaSection from '../components/CtaSection';
+import Footer from '../components/Footer';
 
 
 
@@ -20,6 +22,8 @@ const Home = () => {
                 <Hero />       
                 <ShortlyApp />
                 <InfoSection />
+                <CtaSection />
+                <Footer />
             </main>
         </>
     )

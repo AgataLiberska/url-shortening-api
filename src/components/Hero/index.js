@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+import { CtaLink } from '../Links';
 import {
     HeroContainer, 
     HeroWrap,
@@ -20,7 +20,7 @@ const Hero = () => {
                 <HeroContent>
                     <HeroHeading>More than just shorter links</HeroHeading>
                     <HeroCopy>Build your brand's recognition and get detailed insights on how your links are performing</HeroCopy>
-                    <HeroCTA to='/signup'>Get Started</HeroCTA>
+                    <CtaLink to='/signup'>Get Started</CtaLink>
                 </HeroContent>
             </HeroWrap>
         </HeroContainer>

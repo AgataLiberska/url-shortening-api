@@ -13,4 +13,24 @@ export const LinkWithin = styled(LinkS)`
     &:hover {
         color: var(--navLink-hover);
     }
-`
+`;
+
+export const PageLink = styled(LinkR)`
+
+`;
+
+export const CtaLink = styled(PageLink)`
+    display: inline-block;
+    padding: 0.875rem 2.5rem 0.75rem;
+    background-color: var(--btn-primary);
+    font-weight: 700;
+    color: var(--navLink-lightText);
+    text-decoration: none;
+    border-radius: 1.75rem;
+    transition: background-color 300ms ease-in-out;
+
+    &:hover, &:focus {
+        outline: none;
+        background-color: var(--btn-hover);
+    }
+`;
