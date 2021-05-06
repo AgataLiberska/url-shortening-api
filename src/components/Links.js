@@ -3,30 +3,86 @@ import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
 export const LinkWithin = styled(LinkS)`
-    display: block;
-    font-size: ${({largeText}) => largeText ? '1.125rem' : '1rem'};
+    position: relative;
+    font-size: ${props => props.fontSize};
     font-weight: 700;
-    color: ${({darkText}) => darkText ? 'var(--navLink-darkText' : 'var(--navLink-lightText'};
+    color: ${props => props.color};
     text-decoration: none;
+    cursor: pointer;
     transition: color 300ms ease-in-out;
 
     &:hover {
-        color: var(--navLink-hover);
+        color: ${props => props.hoverColor};
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0px;
+        width: 0%;
+        background-color: ${props => props.hoverColor};
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    }
+
+    &:focus {
+        outline: 0;
+        color: ${props => props.hoverColor};
+
+        &::after {
+            height: 2px;
+            width: 100%;
+        }
     }
 `;
 
 export const PageLink = styled(LinkR)`
+    position: relative;
+    font-size: ${props => props.fontSize};
+    font-weight: 700;
+    color: ${props => props.color};
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 300ms ease-in-out;
+    white-space: nowrap;
 
+    &:hover {
+        color: ${props => props.hoverColor};
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0px;
+        width: 0%;
+        background-color: ${props => props.hoverColor};
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    }
+
+    &:focus {
+        outline: 0;
+        color: ${props => props.hoverColor};
+
+        &::after {
+        height: 2px;
+        width: 100%;
+        }
+    }
 `;
 
-export const CtaLink = styled(PageLink)`
+export const ButtonLink = styled(LinkR)`
     display: inline-block;
-    padding: 0.875rem 2.5rem 0.75rem;
+    width: 100%;
+    padding: ${({padding}) => padding};
     background-color: var(--btn-primary);
+    border-radius: 1.75rem;
+    font-size: ${({fontSize}) => fontSize};
     font-weight: 700;
     color: var(--navLink-lightText);
     text-decoration: none;
-    border-radius: 1.75rem;
     transition: background-color 300ms ease-in-out;
 
     &:hover, &:focus {

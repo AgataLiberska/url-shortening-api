@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { CtaLink } from '../Links';
+import { ButtonLink } from '../Links';
 import {
     HeroContainer, 
     HeroWrap,
     HeroImage,
     HeroContent,
     HeroHeading,
-    HeroCopy, 
-    HeroCTA
+    HeroCopy,
+    ButtonLinkWrap
 } from './HeroElements';
 
 
@@ -20,7 +20,9 @@ const Hero = () => {
                 <HeroContent>
                     <HeroHeading>More than just shorter links</HeroHeading>
                     <HeroCopy>Build your brand's recognition and get detailed insights on how your links are performing</HeroCopy>
-                    <CtaLink to='/signup'>Get Started</CtaLink>
+                    <ButtonLinkWrap>
+                        <ButtonLink to='/signup' fontSize='1.25rem' padding='0.875rem 2.5rem 0.75rem'>Get Started</ButtonLink>
+                    </ButtonLinkWrap>
                 </HeroContent>
             </HeroWrap>
         </HeroContainer>

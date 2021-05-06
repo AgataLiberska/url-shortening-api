@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { Link as LinkS } from 'react-scroll';
-import { Link as LinkR } from 'react-router-dom';
 
 export const HeaderContainer = styled.header`
     margin: auto;
     padding: 2.5rem 1.5rem 1.5rem;
-    background: #fff;
+    background: #fff;  
 `;
 
 export const HeaderWrap = styled.div`
@@ -57,123 +55,27 @@ export const CloseMenuIcon = styled(AiOutlineClose)`
     transform: translate(-50%, -50%);
 `;
 
-export const MainNavWrap = styled.div`
+export const HeaderNav = styled.nav`
     display: none;
 
     @media screen and (min-width: 1024px) {
-        display: block;
-        margin-left: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 3rem;
+        flex-grow:1;
+    }
+`
+
+export const MainNavWrap = styled.div`
         display: flex;
         flex-grow: 1;
+        gap: 2rem;
     }
 `;
 
-export const UserLinks = styled.div`
-    display: none;
-
-    @media screen and (min-width: 1024px) {
-        display: block;
-    }
-`;
-
-export const MainNavLinkWithin = styled(LinkS)`
-    position: relative;
-    margin: 0 1rem;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--navLink-darkText);
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 300ms ease-in-out;
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 0px;
-        width: 0%;
-        background-color: var(--navLink-hover);
-        transition: height 200ms ease-in-out, width 200ms ease-in-out;
-    }
-
-    &:hover {
-        color: var(--navLink-hover);
-    }
-
-    &:focus {
-        outline: 0;
-        color: var(--navLink-hover);
-
-        &::after {
-            height: 2px;
-            width: 100%;
-        }
-    }
-    
-`;
-
-export const MainNavLink = styled(LinkR)`
-    position: relative;
-    margin: 0 1rem;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--navLink-darkText);
-    text-decoration: none;
-    transition: color 300ms ease-in-out;
-
-    &:last-of-type{
-        margin-right: 0;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 0px;
-        width: 0%;
-        background-color: var(--navLink-hover);
-        transition: height 200ms ease-in-out, width 200ms ease-in-out;
-    }
-
-    &:hover {
-        color: var(--navLink-hover);
-    }
-    
-    &:focus {
-        outline: 0;
-        color: var(--navLink-hover);
-
-        &::after {
-            height: 2px;
-            width: 100%;
-        }
-    }
-`;
-
-export const ButtonLink = styled(MainNavLink)`
-    padding: 0.5rem 1.5rem;
-    background-color: var(--btn-primary);
-    border-radius: 1.75rem;
-    color: var(--navLink-lightText);
-    transition: background-color 300ms ease-in-out;
-
-    &::after {
-        content: '';
-        position: absolute;
-        height:0;
-        width: 0;
-    }
-
-    &:hover, &:focus {
-        color: var(--navLink-lightText);
-        background-color: var(--btn-hover);
-
-        &::after {
-            height:0;
-            width: 0;
-        }
-    }
-
+export const UserLinksWrap = styled.div`
+        display: flex;
+        align-items: center;
+        gap: 2rem;
 `;

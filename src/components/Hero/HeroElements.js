@@ -85,3 +85,12 @@ export const HeroCopy = styled.p`
         font-size: 1.375rem;
     }
 `;
+
+export const ButtonLinkWrap = styled.div`
+    width: 12.5rem;
+    margin: auto;
+
+    @media screen and (min-width: 1024px) {
+        margin: unset;
+    }
+`

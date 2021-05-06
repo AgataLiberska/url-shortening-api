@@ -1,5 +1,6 @@
 import React from 'react';
 import imgLogo from '../../images/logo.svg';
+import { LinkWithin, PageLink, ButtonLink } from '../Links';
 import {
     HeaderContainer,
     HeaderWrap,
@@ -7,11 +8,9 @@ import {
     MenuToggle,
     OpenMenuIcon,
     CloseMenuIcon,
+    HeaderNav,
     MainNavWrap,
-    MainNavLinkWithin,
-    MainNavLink,
-    UserLinks,
-    ButtonLink
+    UserLinksWrap,
 } from './HeaderElements';
 import MobileNav from '../MobileNav';
 
@@ -25,16 +24,18 @@ const Header = ({navOpen, toggle}) => {
                     <CloseMenuIcon navopen={navOpen ? 1 : 0} />
                 </MenuToggle>
                 <MobileNav id='mobileNav' navOpen={navOpen} toggle={toggle} />
-                <MainNavWrap>
-                    <MainNavLinkWithin to='try-app' tabIndex='0'>Try It Out</MainNavLinkWithin>
-                    <MainNavLink to='/'>Features</MainNavLink>
-                    <MainNavLink to='/'>Pricing</MainNavLink>
-                    <MainNavLink to='/'>Resources</MainNavLink>
-                </MainNavWrap>
-                <UserLinks>
-                    <MainNavLink to='/'>Login</MainNavLink>
-                    <ButtonLink to='/'>Sign Up</ButtonLink>
-                </UserLinks>
+                <HeaderNav>
+                    <MainNavWrap>
+                        <LinkWithin to='try-app' tabIndex='0' fontSize='1rem' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Try It Out</LinkWithin>
+                        <PageLink to='/' fontSize='1rem' darkText='true' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Features</PageLink>
+                        <PageLink to='/' fontSize='1rem' darkText='true' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Pricing</PageLink>
+                        <PageLink to='/' fontSize='1rem' darkText='true' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Resources</PageLink>
+                    </MainNavWrap>
+                    <UserLinksWrap>
+                        <PageLink to='/' fontSize='1rem' darkText='true' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Log In</PageLink>
+                        <ButtonLink to='/' fontSize='1rem' padding='0.5rem 1.5rem'>Sign Up</ButtonLink>
+                    </UserLinksWrap>
+                </HeaderNav>
             </HeaderWrap>
         </HeaderContainer>
     )

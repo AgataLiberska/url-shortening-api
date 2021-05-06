@@ -31,5 +31,10 @@ export const CtaSectionHeading = styled.h2`
         margin-bottom: 2rem;
         font-size: 2.5rem;
     }
-`
+`;
+
+export const ButtonLinkWrap = styled.div`
+    width: 12.5rem;
+    margin: auto;
+`;
 

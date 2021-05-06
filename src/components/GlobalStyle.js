@@ -29,7 +29,8 @@ const GlobalStyle = createGlobalStyle`
 
         --navLink-darkText: #9E9AA8;
         --navLink-lightText: #fff;
-        --navLink-hover: #34313D;
+        --navLink-dark-hover: #34313D;
+        --navLink-light-hover: #2BD0D0;
 
         --footer-bg: #232127;
         --footerLink: #fff;
