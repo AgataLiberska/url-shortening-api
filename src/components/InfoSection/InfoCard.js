@@ -1,10 +1,19 @@
 import React from 'react';
+import { InfoCardWrap, InfoIcon, InfoIconWrap, InfoCardHeading, InfoCardCopy } from './InfoSectionElements';
 
-const InfoCard = () => {
+const InfoCard = ({ img, heading, copy }) => {
     return (
-        <div>
-            
-        </div>
+        <InfoCardWrap>
+            <InfoIconWrap>
+                <InfoIcon src={img} alt='' />
+            </InfoIconWrap>
+            <InfoCardHeading>
+                { heading }
+            </InfoCardHeading>
+            <InfoCardCopy>
+                { copy }
+            </InfoCardCopy>
+        </InfoCardWrap>
     );
 };
 

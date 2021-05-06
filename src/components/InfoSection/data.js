@@ -5,13 +5,13 @@ export const InfoCardOne = {
 };
 
 export const InfoCardTwo = {
-    img: require('../../images/icon-detailed-records.svg'),
+    img: require('../../images/icon-detailed-records.svg').default,
     heading: "Detailed Records",
     copy: "Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions."
 };
 
 export const InfoCardThree = {
-    img: require('../../images/icon-fully-customizable.svg'),
+    img: require('../../images/icon-fully-customizable.svg').default,
     heading: "Fully Customizable",
     copy: "Improve brand awareness and content discoverability through customizable links, supercharging audience engagement."
 };

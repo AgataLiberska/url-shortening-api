@@ -25,6 +25,8 @@ const GlobalStyle = createGlobalStyle`
         --background-light: #EFF1F7;
         --background-card: #fff;
 
+        --accent-card: #2BD0D0;
+
         --navLink-darkText: #9E9AA8;
         --navLink-lightText: #fff;
         --navLink-hover: #34313D;
