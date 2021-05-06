@@ -3,13 +3,17 @@ import imgMobile from '../../images/bg-boost-mobile.svg';
 import imgDesktop from '../../images/bg-boost-desktop.svg';
 
 export const CtaSectionContainer = styled.section`
-    padding: 3.5625rem 1.5rem;
+    padding: 5.5625rem 1.5rem;
     background-color: var(--background-dark);
     background-image: url(${imgMobile});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     
+    @media screen and (min-width: 768px) {
+        padding: 3.75rem 2.5rem;
+    }
+
     @media screen and (min-width: 1024px) {
         background-image: url(${imgDesktop});
     }

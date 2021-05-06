@@ -5,7 +5,7 @@ import { Link as LinkS } from 'react-scroll';
 export const LinkWithin = styled(LinkS)`
     position: relative;
     font-size: ${props => props.fontSize};
-    font-weight: 700;
+    font-weight: ${props => props.fontWeight};
     color: ${props => props.color};
     text-decoration: none;
     cursor: pointer;
@@ -40,7 +40,7 @@ export const LinkWithin = styled(LinkS)`
 export const PageLink = styled(LinkR)`
     position: relative;
     font-size: ${props => props.fontSize};
-    font-weight: 700;
+    font-weight: ${props => props.fontWeight};
     color: ${props => props.color};
     text-decoration: none;
     cursor: pointer;
@@ -90,3 +90,24 @@ export const ButtonLink = styled(LinkR)`
         background-color: var(--btn-hover);
     }
 `;
+
+export const LinkOut = styled.a`
+    font-size: ${props => props.fontSize};
+    color: ${props => props.color};
+    transition: color 300ms ease-in-out;
+    text-decoration: none;
+
+    & svg path {
+        fill: ${props => props.color};
+        transition: fill 300ms ease-in-out;
+    }
+
+    &:hover {
+        color: ${props => props.hoverColor};
+
+        & svg path {
+            fill: ${props => props.hoverColor};
+        }
+    }
+
+`

@@ -21,8 +21,12 @@ export const ShortlyAppContainer = styled.section`
         z-index: -1;
     }
 
+    @media screen and (min-width: 768px) {
+        padding: 0 2.5rem 5rem;
+    }
+
     @media screen and (min-width: 1024px) {
-        padding: 0 1.5rem 7.5rem;
+        padding: 0 2.5rem 7.5rem;
 
         &::before {
             top: 56px;

@@ -57,6 +57,10 @@ const GlobalStyle = createGlobalStyle`
         overflow-x: hidden;
     }
 
+    section {
+        overflow-x: hidden;
+    }
+
     h1 {
         font-size: 2.625rem;
         font-weight: 700;

@@ -5,6 +5,10 @@ export const HeaderContainer = styled.header`
     margin: auto;
     padding: 2.5rem 1.5rem 1.5rem;
     background: #fff;  
+
+    @media screen and (min-width: 768px) {
+        padding: 2.5rem 2.5rem 1.5rem;
+    }
 `;
 
 export const HeaderWrap = styled.div`
