@@ -26,15 +26,14 @@ export const FormInput = styled.input`
     border-radius: 0.375rem;
     font-size: 1rem;
     line-height: 2.25rem;
-
-
+    
     &::placeholder {
         color: ${({isValid}) => isValid ? 'var(--formPlaceholder)' : 'var(--formPlaceholder-error)'};
     }
 
     &:focus {
         outline: 0;
-        border: ${({isValid}) => isValid ? '3px solid var(--button-primary)' : '3px solid var(--errorRed)'};
+        border: ${({isValid}) => isValid ? '3px solid var(--btn-primary)' : '3px solid var(--errorRed)'};
     }
 
     @media screen and (min-width: 768px) {

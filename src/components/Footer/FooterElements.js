@@ -11,8 +11,13 @@ export const FooterContainer = styled.footer`
 `;
 
 export const FooterWrap = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
     max-width: 1100px;
     margin: 0 auto;
+    align-items: start;
+
 
     @media screen and (min-width: 1024px) {
         display: grid;
@@ -78,5 +83,6 @@ export const LinkWrap = styled.div`
 export const FooterSocialsWrap = styled.div`
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     gap: 1.5rem;
 `;

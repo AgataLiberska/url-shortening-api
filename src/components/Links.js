@@ -11,8 +11,9 @@ export const LinkWithin = styled(LinkS)`
     cursor: pointer;
     transition: color 300ms ease-in-out;
 
-    &:hover {
-        color: ${props => props.hoverColor};
+    & svg path {
+        fill: ${props => props.color};
+        transition: fill 300ms ease-in-out;
     }
 
     &::after {
@@ -26,6 +27,15 @@ export const LinkWithin = styled(LinkS)`
         transition: height 200ms ease-in-out, width 200ms ease-in-out;
     }
 
+
+    &:hover {
+        color: ${props => props.hoverColor};
+
+        & svg path {
+            fill: ${props => props.hoverColor};
+        }
+    }
+
     &:focus {
         outline: 0;
         color: ${props => props.hoverColor};
@@ -33,6 +43,10 @@ export const LinkWithin = styled(LinkS)`
         &::after {
             height: 2px;
             width: 100%;
+        }
+
+        & svg path {
+            fill: ${props => props.hoverColor};
         }
     }
 `;
@@ -92,6 +106,7 @@ export const ButtonLink = styled(LinkR)`
 `;
 
 export const LinkOut = styled.a`
+    position: relative;
     font-size: ${props => props.fontSize};
     color: ${props => props.color};
     transition: color 300ms ease-in-out;
@@ -102,11 +117,36 @@ export const LinkOut = styled.a`
         transition: fill 300ms ease-in-out;
     }
 
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0px;
+        width: 0%;
+        background-color: ${props => props.hoverColor};
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    }
+
     &:hover {
         color: ${props => props.hoverColor};
 
         & svg path {
             fill: ${props => props.hoverColor};
+        }
+    }
+
+    &:focus {
+        outline: 0;
+        color: ${props => props.hoverColor};
+
+        & svg path {
+            fill: ${props => props.hoverColor};
+        }
+
+        &::after {
+        height: 2px;
+        width: 100%;
         }
     }
 
