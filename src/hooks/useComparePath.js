@@ -13,7 +13,7 @@ const useComparePath = (path) => {
         return () => {
             window.removeEventListener('popstate', onLocationChange);
         }
-    }, []);
+    }, [currentPath]);
 
     return (currentPath === path);
 }

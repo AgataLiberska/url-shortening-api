@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import imgLogo from '../../images/logo.svg';
 import { LinkWithin, PageLink, ButtonLink } from '../Links';
 import {
@@ -15,10 +15,18 @@ import {
 import MobileNav from '../MobileNav';
 import useComparePath from '../../hooks/useComparePath';
 
-const Header = ({navOpen, toggle}) => {
+const Header = () => {
+
+    const [navOpen, setNavOpen] = useState(false)
+    
+    const toggle = () => {
+        setNavOpen(!navOpen);
+    }
+    
 
     const isHome = useComparePath('/');
-    console.log(isHome);
+
+    const isSignup = useComparePath('/signup');
 
     return (
         <HeaderContainer  >
@@ -40,7 +48,9 @@ const Header = ({navOpen, toggle}) => {
                     </MainNavWrap>
                     <UserLinksWrap>
                         <PageLink to='/' fontSize='1rem' fontWeight='700' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Log In</PageLink>
-                        <ButtonLink to='/' fontSize='1rem' padding='0.5rem 1.5rem'>Sign Up</ButtonLink>
+                        { isSignup ? null :
+                        <ButtonLink to='/signup' fontSize='1rem' padding='0.5rem 1.5rem'>Sign Up</ButtonLink>
+                        }
                     </UserLinksWrap>
                 </HeaderNav>
             </HeaderWrap>
