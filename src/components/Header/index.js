@@ -13,8 +13,13 @@ import {
     UserLinksWrap,
 } from './HeaderElements';
 import MobileNav from '../MobileNav';
+import useComparePath from '../../hooks/useComparePath';
 
 const Header = ({navOpen, toggle}) => {
+
+    const isHome = useComparePath('/');
+    console.log(isHome);
+
     return (
         <HeaderContainer  >
             <HeaderWrap>
@@ -26,7 +31,9 @@ const Header = ({navOpen, toggle}) => {
                 <MobileNav id='mobileNav' navOpen={navOpen} toggle={toggle} />
                 <HeaderNav>
                     <MainNavWrap>
-                        <LinkWithin to='try-app' smooth={true} duration={500} spy={true} exact='true' offset={-60} tabIndex='0' fontSize='1rem' fontWeight='700' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Try It Out</LinkWithin>
+                        { isHome ? 
+                            <LinkWithin to='try-app' smooth={true} duration={500} spy={true} exact='true' offset={-60} tabIndex='0' fontSize='1rem' fontWeight='700' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Try It Out</LinkWithin> 
+                        : null }
                         <PageLink to='/' fontSize='1rem' fontWeight='700' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Features</PageLink>
                         <PageLink to='/' fontSize='1rem' fontWeight='700' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Pricing</PageLink>
                         <PageLink to='/' fontSize='1rem' fontWeight='700' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Resources</PageLink>
