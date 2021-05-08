@@ -8,7 +8,7 @@ const CtaSection = () => {
             <CtaSectionWrap>
                 <CtaSectionHeading>Boost your links today</CtaSectionHeading>
                 <ButtonLinkWrap>
-                    <ButtonLink to='/signup' padding='0.875rem 2.5rem 0.75rem' fontSize='1.125rem'>Get Started</ButtonLink>
+                    <ButtonLink to='/' padding='0.875rem 2.5rem 0.75rem' fontSize='1.125rem'>Get Started</ButtonLink>
                 </ButtonLinkWrap>
             </CtaSectionWrap>
         </CtaSectionContainer>

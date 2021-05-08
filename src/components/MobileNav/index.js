@@ -37,6 +37,7 @@ const MobileNav = ({navOpen, toggle}) => {
                     <ButtonLinkWrap>
                         <ButtonLink to='/' onClick={toggle} padding='0.75rem 0 0.625rem' fontSize='1.125rem' >Sign Up</ButtonLink>
                     </ButtonLinkWrap>
+    
             </NavContainer>
         </>
     )

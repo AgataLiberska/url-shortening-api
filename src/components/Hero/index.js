@@ -21,7 +21,7 @@ const Hero = () => {
                     <HeroHeading>More than just shorter links</HeroHeading>
                     <HeroCopy>Build your brand's recognition and get detailed insights on how your links are performing</HeroCopy>
                     <ButtonLinkWrap>
-                        <ButtonLink to='/signup' fontSize='1.25rem' padding='0.875rem 2.5rem 0.75rem'>Get Started</ButtonLink>
+                        <ButtonLink to='/' fontSize='1.25rem' padding='0.875rem 2.5rem 0.75rem'>Get Started</ButtonLink>
                     </ButtonLinkWrap>
                 </HeroContent>
             </HeroWrap>
