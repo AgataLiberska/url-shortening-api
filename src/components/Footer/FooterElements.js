@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
     padding: 3.5rem 1.5rem;
-    background-color: var(--footer-bg);
+    background-color: var(--background-dark);
 
     @media screen and (min-width: 768px) {
         padding: 3.5rem 2.5rem; 
@@ -73,7 +73,7 @@ export const FooterNavHeading = styled.h3`
     margin-bottom: 0.75rem;
     font-size: 1rem;
     line-height: 1.5rem;
-    color: var(--footerLink);
+    color: var(--text-light);
     
 `;
 

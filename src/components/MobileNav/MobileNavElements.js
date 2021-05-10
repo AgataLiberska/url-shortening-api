@@ -8,7 +8,7 @@ export const NavContainer = styled.nav`
     width: 90vw;
     max-width: 400px;
     padding: 2.5rem 1.5rem;
-    background: var(--background-dark);
+    background: var(--secondary);
     border-radius: 10px;
     text-align: center;
     transition: all 300ms ease-in-out;

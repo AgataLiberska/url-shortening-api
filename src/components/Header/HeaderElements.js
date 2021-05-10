@@ -29,11 +29,12 @@ export const MenuToggle = styled.button`
     position: relative;
     height: 2.25rem;
     width: 2.25rem;
-    background-color: #fff;
+    background-color: var(--background-light);
     border: none;
+    cursor: pointer;
 
     &:focus {
-        outline: 2px solid var(--copy);
+        outline: 2px solid var(--text-med);
     }
 
     @media screen and (min-width: 1024px) {
@@ -46,7 +47,7 @@ export const OpenMenuIcon = styled(AiOutlineMenu)`
     display: ${({navopen}) => (navopen ? 'none' : 'inline')};
     height: 2rem;
     width: 2rem;
-    color: var(--copy);
+    color: var(--text-med);
     transform: translate(-50%, -50%);
 `;
 
@@ -55,7 +56,7 @@ export const CloseMenuIcon = styled(AiOutlineClose)`
     display: ${({navopen}) => (navopen ? 'inline' : 'none')};
     height: 2rem;
     width: 2rem;
-    color: var(--copy);
+    color: var(--text-med);
     transform: translate(-50%, -50%);
 `;
 

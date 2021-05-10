@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const InfoSectionContainer = styled.section`
     padding: 0 1.5rem 5rem;
-    background-color: var(--background-light);
+    background-color: var(--background-med);
 
     @media screen and (min-width: 768px) {
         padding: 0 2.5rem 5rem;
@@ -23,7 +23,7 @@ export const InfoHeading = styled.h2`
     margin-bottom: 1rem;
     font-size: 1.75rem;
     line-height: 3rem;
-    color: var(--heading-dark);
+    color: var(--text-dark);
 
     @media screen and (min-width: 1024px) {
         margin-bottom: 1.125rem;
@@ -59,7 +59,7 @@ export const InfoCardsContainer = styled.div`
         height: 100%;
         left: 50%;
         transform: translateX(-50%);
-        background-color: var(--accent-card);
+        background-color: var(--primary);
         
     }
 
@@ -81,7 +81,7 @@ export const InfoCardsContainer = styled.div`
 export const InfoCardWrap = styled.div`
     position: relative;
     padding: 4.75rem 2rem 2.5rem;
-    background-color: var(--background-card);
+    background-color: var(--background-light);
     border-radius: 5px;
 
     @media screen and (min-width: 1024px) {
@@ -110,7 +110,7 @@ export const InfoIconWrap = styled.div`
     height: 5.5rem;
     width: 5.5rem;
     border-radius: 50%;
-    background-color: var(--background-dark);
+    background-color: var(--secondary);
 
     @media screen and (min-width: 1024px) {
         left: 2rem;
@@ -126,7 +126,7 @@ export const InfoCardHeading = styled.h3`
     margin-bottom: 0.75rem;
     font-size: 1.375rem;
     line-height: 2rem;
-    color: var(--heading-dark);
+    color: var(--text-dark);
 `;
 
 export const InfoCardCopy = styled.p`

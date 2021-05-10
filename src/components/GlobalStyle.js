@@ -3,41 +3,23 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 
     :root {
-        --heading-dark: #34313D;
-        --heading-light: #fff;
-        --copy: #9E9AA8;
-        
-        --formPlaceholder: #B6B4BC;
-        --formPlaceholder-error: rgba(244, 99, 99, 0.5);
+        --text-dark: #34313D;
+        --text-med: #9E9AA8;
+        --text-light: #fff;
 
-        --errorRed: #f46262;
+        --primary: #2BD0D0;
+        --secondary: #3A3054;
+        --primary-light: #9AE3E3;
+        --secondary-light: #5E4A90;
 
-        --btn-primary: #2BD0D0;
-        --btn-hover: #9AE3E3;
-        --btn-copied: #3A3054;
-        --btn-copied-hover: #5E4A90;
-        --btn-warning: #B6B4BC;
-        --btn-warning-hover: #F46262;
+        --grey: #B6B4BC;
 
-        --buttonText: #fff;
+        --background-dark: #232127;
+        --background-med: #EFF1F7;
+        --background-light: #fff;
 
-        --background-dark: #3A3054;
-        --background-light: #EFF1F7;
-        --background-card: #fff;
-
-        --accent-card: #2BD0D0;
-
-        --navLink-darkText: #9E9AA8;
-        --navLink-lightText: #fff;
-        --navLink-dark-hover: #34313D;
-        --navLink-light-hover: #2BD0D0;
-
-        --footer-bg: #232127;
-        --footerLink: #fff;
-        --footerLink-hover: #2BD0D0;
-
-        --longLink: #34313D;
-        --shortlyLink: #28D0D0;
+        --warningRed: #f46262;
+        --warningRed-light: #E28080;
     }
 
     *, *::before, *::after {
@@ -53,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.125rem;
         font-weight: 500;
         line-height: 1.75rem;
-        color: var(--copy);
+        color: var(--text-med);
         overflow-x: hidden;
     }
 
@@ -65,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 2.625rem;
         font-weight: 700;
         line-height: 3rem;
-        color: var(--heading-dark);
+        color: var(--text-dark);
 
         @media screen and (min-width: 768px) {
             font-size: 4rem;

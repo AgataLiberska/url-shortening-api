@@ -4,7 +4,7 @@ import imgDesktop from '../../images/bg-boost-desktop.svg';
 
 export const CtaSectionContainer = styled.section`
     padding: 5.5625rem 1.5rem;
-    background-color: var(--background-dark);
+    background-color: var(--secondary);
     background-image: url(${imgMobile});
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,7 +29,7 @@ export const CtaSectionHeading = styled.h2`
     margin-bottom: 1rem;
     font-size: 1.75rem;
     line-height: 3rem;
-    color: var(--heading-light);
+    color: var(--text-light);
 
     @media screen and (min-width: 1024px) {
         margin-bottom: 2rem;

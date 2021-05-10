@@ -18,7 +18,7 @@ const LoadingItem = styled.div`
     height: 1rem;
     width: 1rem;
     margin: 1rem 0.3rem 0.5rem;
-    background-color: var(--btn-primary);
+    background-color: var(--primary);
     border-radius: 50%;
     opacity: 0.6;
     animation: 0.9s ${bounce} infinite alternate;

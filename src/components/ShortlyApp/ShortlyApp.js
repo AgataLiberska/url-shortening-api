@@ -15,7 +15,7 @@ const ShortlyApp = () => {
 
     return (
         <ShortlyAppContainer id='try-app'>
-            <ShortlyWrap>
+            <ShortlyWrap >
                 <ShortlyForm onUrlSubmit={submitUrl}/>
                 { appError ? <ErrorMessage margin='1rem auto' fontSize='1rem'>{ appError }</ErrorMessage> : null }
                 { isLoading? <Loader /> : null }

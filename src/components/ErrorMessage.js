@@ -5,5 +5,5 @@ export const ErrorMessage = styled.p`
     font-size: ${props => props.fontSize};
     font-style: italic;
     line-height: 1.125rem;
-    color: var(--errorRed);
+    color: var(--warningRed);
 `

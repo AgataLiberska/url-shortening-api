@@ -91,17 +91,17 @@ export const ButtonLink = styled(LinkR)`
     display: inline-block;
     width: 100%;
     padding: ${({padding}) => padding};
-    background-color: var(--btn-primary);
+    background-color: var(--primary);
     border-radius: 1.75rem;
     font-size: ${({fontSize}) => fontSize};
     font-weight: 700;
-    color: var(--navLink-lightText);
+    color: var(--text-light);
     text-decoration: none;
     transition: background-color 300ms ease-in-out;
 
     &:hover, &:focus {
         outline: none;
-        background-color: var(--btn-hover);
+        background-color: var(--primary-light);
     }
 `;
 

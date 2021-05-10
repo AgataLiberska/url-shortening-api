@@ -37,14 +37,14 @@ const Header = () => {
                 <HeaderNav>
                     <MainNavWrap>
                         { isHome ? 
-                            <LinkWithin to='try-app' smooth={true} duration={500} spy={true} exact='true' offset={-60} tabIndex='0' fontSize='1rem' fontWeight='700' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Try It Out</LinkWithin> 
+                            <LinkWithin to='try-app' smooth={true} duration={500} spy={true} exact='true' offset={-60} tabIndex='0' fontSize='1rem' fontWeight='700' color='var(--text-med)' hoverColor='var(--text-dark)'>Try It Out</LinkWithin> 
                         : null }
-                        <PageLink to='/' fontSize='1rem' fontWeight='700' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Features</PageLink>
-                        <PageLink to='/' fontSize='1rem' fontWeight='700' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Pricing</PageLink>
-                        <PageLink to='/' fontSize='1rem' fontWeight='700' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Resources</PageLink>
+                        <PageLink to='/' fontSize='1rem' fontWeight='700' color='var(--text-med)' hoverColor='var(--text-dark)'>Features</PageLink>
+                        <PageLink to='/' fontSize='1rem' fontWeight='700' color='var(--text-med)' hoverColor='var(--text-dark)'>Pricing</PageLink>
+                        <PageLink to='/' fontSize='1rem' fontWeight='700' color='var(--text-med)' hoverColor='var(--text-dark)'>Resources</PageLink>
                     </MainNavWrap>
                     <UserLinksWrap>
-                        <PageLink to='/' fontSize='1rem' fontWeight='700' color='var(--navLink-darkText)' hoverColor='var(--navLink-dark-hover)'>Log In</PageLink>
+                        <PageLink to='/' fontSize='1rem' fontWeight='700' color='var(--text-med)' hoverColor='var(--text-dark)'>Log In</PageLink>
                         <ButtonLink to='/' fontSize='1rem' padding='0.5rem 1.5rem'>Sign Up</ButtonLink>
                     </UserLinksWrap>
                 </HeaderNav>

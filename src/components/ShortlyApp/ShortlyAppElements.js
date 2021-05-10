@@ -17,7 +17,7 @@ export const ShortlyAppContainer = styled.section`
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: var(--background-light);
+        background-color: var(--background-med);
         z-index: -1;
     }
 
@@ -45,7 +45,7 @@ export const ShortlyFormContainer = styled.div`
 
 export const ShortlyFormWrap = styled.div`
     padding: 1.5rem;
-    background-color: var(--background-dark);
+    background-color: var(--secondary);
     background-image: url(${mobileBg});
     background-repeat: no-repeat;
     background-position: top right;
@@ -69,6 +69,7 @@ export const TryShortlyFormControl = styled(FormControl)`
         flex: 1;
         margin-bottom: unset;
         margin-right: 1.5rem;
+        text-align: left;
     }
 `;
 
@@ -78,7 +79,7 @@ export const LinkListContainer = styled.ul`
 
 export const LinkListItem = styled.li`
     margin-bottom: 1rem;
-    background-color: var(--background-card);
+    background-color: var(--background-light);
     border-radius: 5px;
     text-align: left;
 
@@ -96,12 +97,13 @@ export const LinkListItem = styled.li`
 `
 
 export const LongLinkWrap = styled.div`
-    padding: 0.375rem 1rem;
+    padding: 0.5rem 1rem;
     border-bottom: 1px solid rgb(160 154 168 / 0.25);
 
     @media screen and (min-width: 1024px) {
+        width: calc(45% - 1rem);
+        flex-shrink: 1;
         border: 0;
-        width: 48%;
         padding: unset;
     }
 `
@@ -112,7 +114,7 @@ export const LongLink = styled.p`
     text-overflow: ellipsis;
     font-size: 1rem;
     line-height: 2.25rem;
-    color: var(--longLink);
+    color: var(--text-dark);
 
     @media screen and (min-width: 1024px) {
         font-size: 1.25rem;
@@ -128,6 +130,7 @@ export const ShortLinkWrap = styled.div`
         align-items: center;
         justify-content: flex-end;
         gap: 1.25rem;
+        width: 55%;
         padding: unset;
     }
 `
@@ -136,19 +139,24 @@ export const ShortLink = styled.p`
     margin-bottom: 0.5rem;
     font-size: 1rem;
     line-height: 2.25rem;
-    color: var(--shortlyLink);
+    color: var(--primary);
 
     @media screen and (min-width: 1024px) {
+        margin-bottom: unset;
         font-size: 1.25rem;
         line-height: 2.25rem;
     }
 `
-export const ButtonWrap = styled.div`
+export const ButtonsContainer = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 0.5rem;
 
     @media screen and (min-width: 1024px) {
-        width: 11rem;
+        width: 12rem;
     }
+`
+export const ButtonWrap = styled.div`
+    width: 5.625rem;
+    flex: 1;
 `

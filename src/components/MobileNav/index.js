@@ -18,25 +18,25 @@ const MobileNav = ({navOpen, toggle}) => {
             <NavContainer navOpen={navOpen}>
                 { isHome ? 
                 <ConditionalLinkWrap>
-                    <LinkWithin to='try-app' smooth={true} duration={500} spy={true} exact='true' offset={-60} onClick={toggle} tabIndex='0' fontSize='1.125rem' fontWeight='700' color='var(--navLink-lightText)' hoverColor='var(--navLink-lightText)'>Try It Out</LinkWithin>
+                    <LinkWithin to='try-app' smooth={true} duration={500} spy={true} exact='true' offset={-60} onClick={toggle} tabIndex={navOpen ? '0' : '-1'} fontSize='1.125rem' fontWeight='700' color='var(--text-light)' hoverColor='var(--text-light)'>Try It Out</LinkWithin>
                 </ConditionalLinkWrap>
                 : null }
                 <MainLinksWrap>
                     <LinkWrap>
-                        <PageLink to='/' onClick={toggle} fontSize='1.125rem' fontWeight='700' color='var(--navLink-lightText)' hoverColor='var(--navLink-lightText)'>Features</PageLink>
+                        <PageLink to='/' onClick={toggle} tabIndex={navOpen ? '0' : '-1'} fontSize='1.125rem' fontWeight='700' color='var(--text-light)' hoverColor='var(--text-light)'>Features</PageLink>
                     </LinkWrap>
                     <LinkWrap>
-                        <PageLink to='/' onClick={toggle} fontSize='1.125rem' fontWeight='700' color='var(--navLink-lightText)' hoverColor='var(--navLink-lightText)'>Pricing</PageLink>
+                        <PageLink to='/' onClick={toggle} tabIndex={navOpen ? '0' : '-1'} fontSize='1.125rem' fontWeight='700' color='var(--text-light)' hoverColor='var(--text-light)'>Pricing</PageLink>
                     </LinkWrap>
                     <LinkWrap> 
-                        <PageLink to='/' onClick={toggle} fontSize='1.125rem' fontWeight='700' color='var(--navLink-lightText)' hoverColor='var(--navLink-lightText)'>Resources</PageLink>
+                        <PageLink to='/' onClick={toggle} tabIndex={navOpen ? '0' : '-1'} fontSize='1.125rem' fontWeight='700' color='var(--text-light)' hoverColor='var(--text-light)'>Resources</PageLink>
                     </LinkWrap>
                 </MainLinksWrap>
                     <LinkWrap>
-                        <PageLink to='/' onClick={toggle} fontSize='1.125rem' fontWeight='700' color='var(--navLink-lightText)' hoverColor='var(--navLink-lightText)'>Login</PageLink>
+                        <PageLink to='/' onClick={toggle} tabIndex={navOpen ? '0' : '-1'} fontSize='1.125rem' fontWeight='700' color='var(--text-light)' hoverColor='var(--text-light)'>Login</PageLink>
                     </LinkWrap>
                     <ButtonLinkWrap>
-                        <ButtonLink to='/' onClick={toggle} padding='0.75rem 0 0.625rem' fontSize='1.125rem' >Sign Up</ButtonLink>
+                        <ButtonLink to='/' onClick={toggle} tabIndex={navOpen ? '0' : '-1'} padding='0.75rem 0 0.625rem' fontSize='1.125rem' >Sign Up</ButtonLink>
                     </ButtonLinkWrap>
     
             </NavContainer>
