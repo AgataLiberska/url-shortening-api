@@ -4,6 +4,7 @@ import useComparePath from '../../hooks/useComparePath';
 import { LinkWithin, PageLink, ButtonLink} from '../Links';
 import {
     NavContainer,
+    ConditionalLinkWrap,
     MainLinksWrap,
     LinkWrap,
     ButtonLinkWrap
@@ -16,9 +17,9 @@ const MobileNav = ({navOpen, toggle}) => {
         <>
             <NavContainer navOpen={navOpen}>
                 { isHome ? 
-                <LinkWrap>
+                <ConditionalLinkWrap>
                     <LinkWithin to='try-app' smooth={true} duration={500} spy={true} exact='true' offset={-60} onClick={toggle} tabIndex='0' fontSize='1.125rem' fontWeight='700' color='var(--navLink-lightText)' hoverColor='var(--navLink-lightText)'>Try It Out</LinkWithin>
-                </LinkWrap>
+                </ConditionalLinkWrap>
                 : null }
                 <MainLinksWrap>
                     <LinkWrap>
@@ -27,7 +28,7 @@ const MobileNav = ({navOpen, toggle}) => {
                     <LinkWrap>
                         <PageLink to='/' onClick={toggle} fontSize='1.125rem' fontWeight='700' color='var(--navLink-lightText)' hoverColor='var(--navLink-lightText)'>Pricing</PageLink>
                     </LinkWrap>
-                    <LinkWrap>
+                    <LinkWrap> 
                         <PageLink to='/' onClick={toggle} fontSize='1.125rem' fontWeight='700' color='var(--navLink-lightText)' hoverColor='var(--navLink-lightText)'>Resources</PageLink>
                     </LinkWrap>
                 </MainLinksWrap>

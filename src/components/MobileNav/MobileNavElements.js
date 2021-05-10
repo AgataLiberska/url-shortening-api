@@ -19,10 +19,14 @@ export const NavContainer = styled.nav`
     }
 `;
 
+export const ConditionalLinkWrap = styled.div`
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgb(160 154 168 / 0.25);
+`
+
 export const MainLinksWrap = styled.div`
     margin-bottom: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgb(160 154 168 / 0.25);
     border-bottom: 1px solid rgb(160 154 168 / 0.25);
 `;
 
