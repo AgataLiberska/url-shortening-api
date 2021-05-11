@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Frontend Mentor - Shortly URL shortening API Challenge solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### The challenge
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+- View the optimal layout for the site depending on their device's screen size
+- Shorten any valid URL
+- See a list of their shortened links, even after refreshing the browser
+- Copy the shortened link to their clipboard in a single click
+- Receive an error message when the `form` is submitted if:
+  - The `input` field is empty
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+![](./public/screenshot.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Links
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/react-js-styled-components-SOpXIbYuo)
+- [Live Demo](https://url-shortening-api-ten-gray.vercel.app/)
 
-### `npm run eject`
+## My process
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Built with
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Styled Components](https://styled-components.com/)
+- [React Router](https://reactrouter.com/)
+- [React Scroll](https://github.com/fisshy/react-scroll)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### What I learned
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This was my first independent project using Create React App and styled components. I gained experience breaking the project down into components and creating custom hooks.
 
-## Learn More
+- All shortened links are saved to local storage, so I added a delete button to the cards for better UI. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- I wanted to implement a scroll effect using the React scroll component, so I added a 'Try it out' link to the top menu. As this only makes sense on the home page, I created a custom hook to check whether the current page is a specified path and conditionally render the component.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```js
+// custom hook
+const useComparePath = (path) => {
+    const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
-### Code Splitting
+    useEffect(() => {
+        const onLocationChange = () => {
+            setCurrentPath(window.location.pathname);
+        }
+        window.addEventListener('popstate', onLocationChange);
+        return () => {
+            window.removeEventListener('popstate', onLocationChange);
+        }
+    }, [currentPath]);
+    return (currentPath === path);
+}
+// In the header component
+const isHome = useComparePath('/');
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+{ isHome ? 
+    <LinkWithin to='try-app' smooth={true} duration={500} spy={true} exact='true' offset={-60} tabIndex='0' fontSize='1rem' fontWeight='700' color='var(--text-med)' hoverColor='var(--text-dark)'>Try It Out</LinkWithin> 
+: null }
+```
 
-### Analyzing the Bundle Size
+- I learnt how to create a custom loader animation using styled components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- I would like to add a page to this project - a sign up form, so I set it up using React Router to make this easy to do in the future.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Continued development
 
-### Advanced Configuration
+- React scroll links don't seem to work like normal links which poses an accessibility challenge - I added a tabindex in the markup to make them focusable but they cannot be activated with the Enter key - I will need to come up with a solution to this.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- I also need to explore accessibility of the link-shortening api - how to announce loading a link, and a result showing up on the screen.
 
-### Deployment
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Frontend Mentor - [@AgataLiberska](https://www.frontendmentor.io/profile/AgataLiberska)
+- Twitter - [@AgataLiberska](https://twitter.com/AgataLiberska)
